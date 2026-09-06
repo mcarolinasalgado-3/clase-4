@@ -1,0 +1,226 @@
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*HEADER*/
+header {
+    color: #FFD85F;
+    background-color: #202b22;
+    background-image: url(../img/fondo-portada.jpg);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*ruta de especificidad*/
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: space-evenly;
+}
+
+header nav ul li a {
+    color: #F2F2F2;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    grid-area: contenido;
+}
+
+.tarjeta {
+    background-color: #202b22;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    text-align: center;
+    padding: 2rem;
+}
+@media (min-width: 1024px) {
+    .tarjeta {
+        width: 30%;
+    }
+}
+
+.tarjeta h2 {
+    font-size: 1.5rem;
+}
+
+.tarjeta p {
+    font-size: 1.2rem;
+}
+
+
+/*MAIN*/
+main {
+    color: #FFD85F;
+    background-color: #202b22;
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "info"
+    "contenido";
+    gap: 1.5rem;
+    padding: 1.25rem;
+    margin: 1.25rem;
+    justify-items: center;
+}
+
+aside {
+    grid-area: info;
+}
+
+h1 {
+    grid-area: titulo;
+    color: #FFD85F;
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+/*FOOTER*/
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: space-evenly;
+}
+
+.texto-footer {
+    padding: 1rem 2rem;
+}
+
+
+/*PERSONALIZACION DE COLORES*/
+body {
+    background-color: #202b22;
+}
+
+footer {
+    background-color: #515151;
+}
+
+h2 {
+    color: #FFD85F;
+    font-size: 2rem;
+}
+
+.texto-imagenes {
+    color: #9eb8a3;
+}
+
+.texto-footer {
+    color: #cccccc;
+}
+
+/*PERSONALIZACION DE FUENTES*/
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.lobster-regular {
+    font-family: "Lobster", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*PERSONALIZACION DE IMAGEN*/
+
+.header-eventos {
+    background-image: url(../img/fondo-eventos.png);
+}
+
+.tarjeta img {
+    width: 70%;
+    height: 350px;
+    object-fit: cover;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+/*a todas las imágenes que dependen de galería, les aplico este width*/
+.galeria img{
+    width: 100%;
+}
+
+/* MOBILE breakpoints*/
+@media (min-width: 768px) {
+    .galeria{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .galeria{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: 1fr; /* sin cambio de columnas */
+    }
+}
+
+@media (min-width: 1024px) {
+    .galeria{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* PERSONALIZACIÓN DEL FORM*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.25rem;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.25rem;
+    border: none;
+}
+
+form button {
+    align-self: flex-start;
+    padding: 0.6rem 0.6rem;
+}
+
